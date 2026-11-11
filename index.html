@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Clínica Veterinária</title>
+</head>
+<body>
+
+    <h1>Clínica Veterinária</h1>
+
+    <div id="login">
+        <h2>Login</h2>
+
+        <input type="email" id="email" placeholder="E-mail">
+        <input type="password" id="senha" placeholder="Senha">
+
+        <button onclick="login()">Entrar</button>
+    </div>
+
+    <div id="sistema" style="display:none">
+
+        <h2>Bem-vindo à clínica!</h2>
+        <button onclick="sair()">Sair</button>
+
+        <hr>
+
+        <h2>Cadastrar Tutor</h2>
+
+        <input type="text" id="nomeTutor" placeholder="Nome">
+        <input type="text" id="cpfTutor" placeholder="CPF">
+        <input type="text" id="telefoneTutor" placeholder="Telefone">
+
+        <button onclick="cadastrarTutor()">Cadastrar Tutor</button>
+
+        <h3>Lista de Tutores</h3>
+        <input type="text" id="buscaTutor" placeholder="Pesquisar nome">
+        <button onclick="listarTutores()">Pesquisar</button>
+
+        <div id="listaTutores"></div>
+
+        <hr>
+
+        <h2>Cadastrar Pet</h2>
+
+        <input type="text" id="nomePet" placeholder="Nome do pet">
+        <input type="text" id="especiePet" placeholder="Espécie">
+        <input type="text" id="racaPet" placeholder="Raça">
+
+        <select id="tutorPet">
+            <option value="">Selecione o tutor</option>
+        </select>
+
+        <button onclick="cadastrarPet()">Cadastrar Pet</button>
+
+        <h3>Lista de Pets</h3>
+        <div id="listaPets"></div>
+
+        <hr>
+
+        <h2>Cadastrar Agendamento</h2>
+
+        <select id="petAgendamento">
+            <option value="">Selecione o pet</option>
+        </select>
+
+        <input type="datetime-local" id="dataAgendamento">
+        <input type="text" id="descricaoAgendamento" placeholder="Descrição">
+
+        <button onclick="cadastrarAgendamento()">Agendar</button>
+
+        <h3>Lista de Agendamentos</h3>
+        <div id="listaAgendamentos"></div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
